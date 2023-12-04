@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/pexels-tbee-82256.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainContan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.mainContan .main{
+    position: relative;
+    border: 4px solid black;
+    border-radius: 20px;
+    width: 35%;
+    height: 80%;
+}
+.mainContan .main h2{
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+.mainContan .main .input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    position: relative;
+    top: 50px;
+}
+.mainContan .main .input input{
+    position: relative;
+    width: 80%;
+}
+.mainContan .main .bttn{
+    position: relative;
+    top: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.mainContan .main .bttn button{
+    width: 40%;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 5px;
+    color: white !important;
+}
+.mainContan .main .linkl{
+    position: relative;
+    top: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px !important;
+    text-decoration: none;
+    font-weight: 700;
+}
+.mainContan .main .linkl p a{
+    text-decoration: none;
+}
+.mainContan .main .linkl p a:hover{
+    text-decoration: underline;
+}
+@media (max-width:500px) {
+    .mainContan .main{
+    position: relative;
+    border: 4px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: 570px;
+}
+.mainContan .main h2{
+    font-weight: 700;
+    font-size: 38px;
+}
+.mainContan .main .input input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.mainContan .main .bttn button{
+    width: 50%;
+}
+
+}
+
+
+
+
+hr{
+    font-size: 20px;
+    color: black;
+}
+.hr-text {
+    line-height: 1em;
+    position: relative;
+    top: 90px;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    opacity: 2.5;
+    background-color: transparent;
+  
+    &:before {
+      content: "";
+      /* // use the linear-gradient for the fading effect
+          // use a solid background color for a solid bar */
+      background: linear-gradient(to right, transparent, #000000, transparent);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+    }
+  
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+  
+      padding: 0 0.5em;
+      line-height: 1.5em;
+      /* // this is really the only tricky part, you need to specify the background color of the container element... */
+      background-color: #fcfcfa;
+    }
+  }
+  /* ============= google ============= */
+.google{
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.google #google{
+    background-image: url(../images/download\ \(1\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 5px;
+    background-color: white;
+    outline: none;
+}

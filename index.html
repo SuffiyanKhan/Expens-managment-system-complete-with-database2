@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">       
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>My menu</header>
+        <a id="shoePopup" class="active" href="#"> <i class="fas fa-user"></i><span>Your Profile</span></a>
+        <a class="active" href="./index.html"> <i class="fas fa-qrcode"></i><span>Dashboard</span></a>
+        <a id="updateProfile" href="#"><i class="fas fa-floppy-disk"></i><span>Manage Profile</span></a>
+        <a href="#"> <i class="fas fa-link"></i><span>Shortcuts</span></a>
+        <a href="#"> <i class="fas fa-stream"></i><span>Overview</span></a>
+        <a href="#"> <i class="fas fa-calendar"></i><span>Events</span></a>
+        <a href="#"> <i class="fas fa-question-circle"></i><span>About</span></a>
+        <a href="#"> <i class="fas fa-sliders-h"></i><span>Services</span></a>
+        <a id="deleteAccount" href="#"><i class="fa-regular fa-circle-xmark"></i><span>Account Delete</span></a>
+        <a id="logout" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>logout</span></a>
+    </div>
+    <div class="profilePopup">
+        <h2 id="getdet">Your Profile</h2>
+        <div class="getDetails">
+            <p id="gname">Name : Suffiyan ahmed khan</p>
+            <p id="gemail">Email : suffiyanahmed@gmail.com</p>
+            <p id="gphone">Phone_no : 03131004416</p>
+        </div>
+        <div class="closePopup">
+            <button class="btn btn-warning" id="closePopup">Close</button>
+        </div>
+    </div>
+    <div class="profilePopup3">
+        <h2>Your Profile</h2>
+        <div class="getDetails">
+            <p id="gname">Name : Suffiyan ahmed khan 2</p>
+            <p id="gemail">Email : suffiyanahmed@gmail.com</p>
+        </div>
+        <div class="closePopup">
+            <button class="btn btn-warning" id="closePopup">Close</button>
+        </div>
+    </div>
+    <div class="profilePopup4">
+        <h3 id="upd">Upadate Your Profile</h3>
+        <p id="para">Note ; Email can't be change</p>
+        <div class="updtbtn">
+            <button class="btn btn-light" id="updatname">Update name</button>
+            <button class="btn btn-light"  id="updatphone">Update  phone number</button>
+        </div>
+        <div class="updaPopup">
+            <button class="btn btn-warning" id="updaPopup">Close</button>
+        </div>
+    </div>
+    <div class="profilePopup5">
+        <div class="upInp">
+            <h2 id="updN">Upadate Your Profile Name</h2>
+            <div class="updateName">
+                <p id="upN">Update your Name</p>
+               <input placeholder="Enter Name" class="form-control" type="text" name="" id="updateName">
+            </div>
+        </div>
+        <div class="updName">
+            <button class="btn btn-warning" id="updatnamee">Update Name</button>
+        </div>
+    </div>
+    <div class="profilePopup6">
+        <div class="upeInp">
+            <h2 id="upedN">Upadate Your Profile Name</h2>
+            <div class="updateEmail">
+                <p id="upeN">Update your Phone number</p>
+               <input placeholder="Enter Phone number" class="form-control" type="text" name="" id="updatePhone">
+            </div>
+        </div>
+        <div class="updatemail">
+            <button class="btn btn-warning" id="updatemail">Update phone number</button>
+        </div>
+    </div>
+    <div class="expense">
+        <div class="getInput">
+            <input type="text" placeholder="Enter something" class="form-control md-2" id="text">
+            <input type="number" placeholder="Enter ammount" class="form-control md-2" id="ammount">
+            <input type="date" placeholder="Enter something" class="form-control md-2" id="date">
+            <button id="addExpense" class="btn btn-success">Add</button>
+            <button id="deleteExpense" class="btn btn-danger">Delete All </button>
+            <button  id="refreshDocum" class="btn btn-primary">Refresh </button>
+        </div>
+        <div class="btns">
+        </div>
+    </div>
+    <div class="showExpense">
+        <div class="main">
+            <div class="expense1">
+                <p></p>
+                <p></p>
+                <p></p>
+                <!-- <p><i class="fa-regular fa-pen-to-square"></i></p> -->
+                <!-- <p><i class="fa-solid fa-delete-left"></i></p> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p id="totids">Total Items : 0</p>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

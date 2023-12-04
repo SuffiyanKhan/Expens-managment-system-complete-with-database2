@@ -1,0 +1,444 @@
+/* Gogglr fonts */      
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+}
+:root{
+   /* color */
+   --body-color: #E4E9F7;
+   --sidebar-color: #FFF;
+   --primary-color: #695CFE;
+   --primary-color-light: #F6F5FF;
+   --toggle-color: #DDD;
+   --text-color: #707070;
+   /* transition */
+   --tran-02: all 0.2s ease ;
+   --tran-03: all 0.3s ease ;
+   --tran-04: all 0.4s ease ;
+   --tran-05: all 0.5s ease ;
+}
+body{
+   background-color: var(--body-color);
+}
+
+/* ================= side bar ================= */
+
+.sidebar{
+   position: fixed;
+   top: 0;
+   left: -310px;
+   width: 300px;
+   height: 100%;
+   background-color: var(--sidebar-color);
+   transition: var(--tran-03);
+   box-shadow: 0 0 15px;
+   overflow: auto;
+   z-index: 1;
+}
+.sidebar header{
+   color: var(--text-color);
+   font-size: 28px;
+   line-height: 70px;
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   user-select: none;            
+}
+.sidebar a{
+   display: block;
+   color: var(--text-color);
+   height: 65px;
+   width: 100%;
+   line-height: 65px;
+   padding-left: 30px;
+   border-bottom: 1px solid var(--text-color);
+   border-top: 1px solid black;
+   border-left: 5px solid transparent;
+   font-family: 'Open Sans',sans-serif ;
+   transition: var(--tran-05);
+   text-decoration: none;
+}
+a:hover{
+   border-left: 5px solid var(--primary-color);
+   color: var(--primary-color);
+}
+.sidebar a i{
+   font-size: 23px;
+   margin-right: 16px;
+}
+.sidebar a span{
+   letter-spacing: 1px;
+   text-transform: uppercase;
+}
+#check{
+   display: none;
+}
+label #btn, label #cancel{
+   position: absolute;
+   cursor: pointer;
+   background-color: black;
+   height: 45px;
+   width: 45px;
+   text-align: center;
+   line-height: 45px;
+   color: white;
+   font-size: 29px;
+   margin: 15px 30px;
+   border-radius: 5px;
+   transition: var(--tran-03);
+} 
+label #cancel{
+   opacity: 0;
+   visibility: hidden;
+}
+#check:checked ~ label #btn{
+   margin-left: 305px;
+   opacity: 0;
+   visibility: hidden;
+}
+#check:checked ~ label #cancel{
+   margin-left: 304px;
+   opacity: 1;
+   visibility: visible;
+}
+#check:checked ~ .sidebar{
+   left: 0;
+}
+
+/* Profile popup */
+
+.profilePopup{
+    position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 420px;
+height: 360px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 0 10px;
+z-index: -1;
+opacity: 0;
+display: none;
+}
+.profilePopup #getdet{
+text-align: center;
+position: relative;
+top: 20px;
+font-size: 31px;
+}
+.profilePopup .getDetails{
+position: relative;
+top: 60px;
+left: 20px;
+font-size: 21px;
+}
+.profilePopup .closePopup{
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  ============= Expensive managment system ============= */
+
+.expense{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   justify-content: space-around;
+   top: 120px;
+   gap: 10px !important;
+  }
+  .expense .getInput{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   gap: 10px;
+  }
+  .expense .getInput input{
+   width: 20%;
+  }
+  .showExpense{
+   position: relative;
+   top: 200px;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 250px;
+   overflow: auto;
+  }
+  .showExpense div{
+   position: sticky;
+   top: 0;
+      width: 100%;
+  }
+  .showExpense .expense{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   background-color: white;
+  }
+  .showExpense .expense1{
+   height: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   background-color: white;
+   position: sticky;
+   top: 0;
+   z-index: 1;
+   display: none;
+   flex-wrap: wrap;
+  }
+  .showExpense .expense #showExpensive{
+   flex-wrap: wrap;
+  }
+  .profilePopup1{
+   position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 380px;
+height: 420px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 0 10px;
+z-index: 1;
+z-index: -1;
+opacity: 0;
+display: none;
+  }
+  .profilePopup1 #getdet{
+   text-align:center;
+   position: relative;
+   top: 20px;
+   font-size: 28px;
+   font-weight: 600;
+  }
+  .profilePopup1 #para{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 40px;
+  }
+  .profilePopup1 .getInp{
+   position: relative;
+   left: 20px;
+   top: 60px;
+   gap: 10px;
+  }
+  .profilePopup1 .getInp input{
+   width: 90%;
+  }
+  .profilePopup1 .closePopup{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 100px
+  }
+  .profilePopup3{
+   position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 380px;
+height: 420px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 0 10px;
+z-index: 1;
+z-index: -1;
+opacity: 0;
+display: none;
+  }
+  .profilePopup4{
+   position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 380px;
+height: 310px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 0 10px;
+z-index: 1;
+z-index: -1;
+opacity: 0;
+display: none;
+  }
+  .profilePopup4 #upd{
+  
+   text-align: center;
+   position: relative;
+   top: 20px;
+}
+.profilePopup4 #para{
+   text-align: center;
+   position: relative;
+   top: 30px;
+   color: red;
+}
+  .profilePopup4 .updtbtn{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 50px;
+   gap: 10px;
+  }
+  .profilePopup4 .updtbtn button{
+   text-align: left;
+   width: 300px;
+   border: none;
+  }
+  .profilePopup4 .updaPopup{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top: 80px;
+  }
+  .profilePopup5{
+   position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 380px;
+height: 250px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 0 10px;
+z-index: 1;
+z-index: -1;
+opacity: 0;
+display: none;
+  }
+  .profilePopup5 .upInp #updN{
+   text-align: center;
+   position: relative;
+   top: 20px;
+   font-size: 20px !important;
+  }
+  .profilePopup5 .upInp .updateName #upN{
+   position: relative;
+   left: 20px;
+  }
+  .profilePopup5 .upInp .updateName input{
+   width: 90%;
+   margin: auto;
+  }
+  .profilePopup5 .updateName{
+   position: relative;
+   top: 50px;
+  }
+  .profilePopup5 .updName{
+   position: relative;
+   top: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .profilePopup6{
+   position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+width: 380px;
+height: 250px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 0 0 10px;
+z-index: 1;
+z-index: -1;
+opacity: 0;
+display: none;
+  }
+  .profilePopup6 .upeInp #upedN{
+   text-align: center;
+   position: relative;
+   top: 20px;
+   font-size: 20px !important;
+  }
+  .profilePopup6 .upeInp .updateEmail #upeN{
+   position: relative;
+   left: 20px;
+  }
+  .profilePopup6 .upeInp .updateEmail input{
+   
+   width: 90%;
+   margin: auto;
+  }
+  .profilePopup6 .updateEmail{
+   position: relative;
+   top: 50px;
+  }
+  .profilePopup6 .updatemail{
+   position: relative;
+   top: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  @media (max-width:500px) {
+   .expense{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .expense .getInput{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .expense .getInput input{
+       width: 100%;
+   }
+   .expense .getInput button {
+       width: 120px;
+   }
+   .footer{
+      display: block;
+      position: fixed;
+      top: 650px;
+      font-size: 25px;
+      font-weight: 600;
+     }
+     .showExpense{
+      position: relative;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  overflow: auto;
+  }
+  .expense{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  position: relative;
+  justify-content: space-around;
+  top: 80px;
+  gap: 10px !important;
+  /* width: 100%; */
+  /* width:; */
+  }
+  #ids{
+      display: none;
+  }
+  }
+  #refreshDocum{
+   display: none;
+  }
